@@ -1,10 +1,105 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Example</title>
-    </head>
-    <body>
-        <p>This is an example of a simple HTML page with one paragraph.</p>
-        <p>33.</p>
-    </body>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Fun ! ✨</title>
+    <style>
+        /* Reset de base et centrage complet */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Fond dégradé animé */
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBg 15s ease infinite;
+            overflow: hidden;
+        }
+
+        /* Animation du fond */
+        @keyframes gradientBg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Boîte principale */
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            transform: scale(0.9);
+            animation: popIn 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+        }
+
+        /* Animation d'apparition de la carte */
+        @keyframes popIn {
+            to {
+                transform: scale(1);
+            }
+        }
+
+        /* Style du titre */
+        h1 {
+            color: white;
+            font-size: 4rem;
+            font-weight: 900;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        /* Petit effet sympa quand on passe la souris sur le titre */
+        h1:hover {
+            transform: scale(1.1) rotate(2deg);
+        }
+
+        /* Sous-titre */
+        p {
+            color: #ffffff;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .emoji {
+            display: inline-block;
+            animation: wave 2s infinite;
+            transform-origin: 70% 70%;
+        }
+
+        /* Animation de la main qui s'agite */
+        @keyframes wave {
+            0% { transform: rotate( 0.0deg) }
+           10% { transform: rotate(14.0deg) }
+           20% { transform: rotate(-8.0deg) }
+           30% { transform: rotate(14.0deg) }
+           40% { transform: rotate(-4.0deg) }
+           50% { transform: rotate(10.0deg) }
+           60% { transform: rotate( 0.0deg) }
+          100% { transform: rotate( 0.0deg) }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Hello, World! <span class="emoji">👋</span></h1>
+        <p>Le code fonctionne, et en plus, il a du style. 😎</p>
+    </div>
+
+</body>
 </html>
